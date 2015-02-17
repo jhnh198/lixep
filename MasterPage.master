@@ -9,29 +9,31 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
-        <asp:Image ID="logo" runat="server" />
+    <form ID="form1" runat="server">
+    
+
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
+            <div>
+                <asp:Image ID="logo" runat="server" />
+                <div ID="banner"></div>
+                <nav class="navigation">
+                    <asp:Label ID="lblHome" runat="server" Text="Home"></asp:Label> <br />
+                    <asp:Label ID="lblRegister" runat="server" Text="Register"></asp:Label> <br />
+                    <asp:Label ID="lblScoreboards" runat="server" Text="Scoreboards"></asp:Label> <br />
+                    <asp:Label ID="lblAffiliates" runat="server" Text="Affiliates"></asp:Label> <br />
+                    <asp:Label ID="lblGames" runat="server" Text="Games"></asp:Label> <br />
+                    <asp:Label ID="lblForum" runat="server" Text="Forum"></asp:Label> <br />
+                    <asp:Label ID="lblContact" runat="server" Text="Contact"></asp:Label> <br />            
+                </nav>
 
-        <nav>
-            <asp:Label ID="lblHome" runat="server" Text="Home"></asp:Label> <br />
-            <asp:Label ID="lblRegister" runat="server" Text="Register"></asp:Label> <br />
-            <asp:Label ID="lblScoreboards" runat="server" Text="Scoreboards"></asp:Label> <br />
-            <asp:Label ID="lblAffiliates" runat="server" Text="Affiliates"></asp:Label> <br />
-            <asp:Label ID="lblGames" runat="server" Text="Games"></asp:Label> <br />
-            <asp:Label ID="lblForum" runat="server" Text="Forum"></asp:Label> <br />
-            <asp:Label ID="lblContact" runat="server" Text="Contact"></asp:Label> <br />            
-        </nav>
+                <div ID="divBody">
+                    <p>Main Page content field</p>
+                </div>
+                
+                <div ID="divFooter"> Footer Goes here</div>
 
-        <div>
-            <p>Main Page content field</p>
-        </div>
-
-        
-    </div>
+            </div>
+        </asp:ContentPlaceHolder>    
     </form>
 </body>
 </html>
