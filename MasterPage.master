@@ -20,9 +20,11 @@
     <br /><br />
 
     <form>
-        <asp:ContentPlaceHolder ID="cntPageMain" runat="server">
+        <div id="mainBodyTemplate">
+            <asp:ContentPlaceHolder ID="cntPageMain" runat="server">
 
-        </asp:ContentPlaceHolder>
+            </asp:ContentPlaceHolder>
+        </div>
     </form>
 </body>
 </html>
