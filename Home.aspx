@@ -4,6 +4,15 @@
     <asp:SiteMapPath runat="server"></asp:SiteMapPath>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cntTabs" Runat="Server">
-    <asp:LinkButton ID="LinkButton1" runat="server">LinkButton</asp:LinkButton>
+    <asp:LinkButton ID="lbtnHome" runat="server">Home</asp:LinkButton>
+    <asp:LinkButton ID="lbtnGames" runat="server">Games</asp:LinkButton>
+    <asp:LinkButton ID="lbtnScoreboard" runat="server">Scoreboard</asp:LinkButton>
+    <asp:LinkButton ID="lbtnForums" runat="server">Forums</asp:LinkButton>
+    <asp:LinkButton ID="lbtnRelatedSites" runat="server">Related Sites</asp:LinkButton>
+    <asp:LinkButton ID="lbtnRegister" runat="server">Register</asp:LinkButton>
+    <asp:LinkButton ID="lbtnContact" runat="server">Contact</asp:LinkButton>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cntPageMain" runat="server">
+    <h1>Welcome to Lixep!</h1>
 </asp:Content>
 

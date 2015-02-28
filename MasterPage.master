@@ -9,11 +9,20 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
+    <br /><br />
     <form id="form1" runat="server">
     <div id="mainNav">
         <asp:ContentPlaceHolder id="cntTabs" runat="server">
         </asp:ContentPlaceHolder>
     </div>
+    </form>
+
+    <br /><br />
+
+    <form>
+        <asp:ContentPlaceHolder ID="cntPageMain" runat="server">
+
+        </asp:ContentPlaceHolder>
     </form>
 </body>
 </html>
