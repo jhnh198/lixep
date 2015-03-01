@@ -1,0 +1,33 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="contact.aspx.cs" Inherits="contact" %>
+
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <form id="form1" runat="server" action="post">
+        Contact us at ther following:
+      <div style="border-right: thin ridge; padding-right: 20px; border-top: thin ridge;
+            padding-left: 20px; padding-bottom: 20px; border-left: thin ridge; width: 531px;
+            padding-top: 20px; border-bottom: thin ridge; font-family: Verdana; height: 211px;
+            background-color: #FFFFE8">
+          *Email*<br />
+          *Phone Number*<br />
+          *PO Box*<br />
+          
+          <span>Please leave any comments and concerns right here:</span><br />
+
+          <asp:TextBox ID="comments" TextMode="MultiLine" runat="server"></asp:TextBox>
+            <br /><br />
+            <asp:Button ID="collect" runat="server" Text="Send" OnClick="collect_Click" />
+        
+        
+      </div>
+    </form>
+  </body>
+</html>
+
