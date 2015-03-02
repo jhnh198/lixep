@@ -21,7 +21,6 @@
     <asp:TextBox ID="comments" TextMode="MultiLine" runat="server"></asp:TextBox>
 
     <br /><br />
-
-    <asp:Button ID="collect" runat="server" Text="Send" <!--OnClick="collect_Click" Not working yet--> />
+    <asp:Button ID="collect" runat="server" Text="Send"/>
 </asp:Content>
 
