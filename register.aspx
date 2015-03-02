@@ -16,7 +16,8 @@
         <asp:ValidationSummary ID="vldAllFields"
             HeaderText="Please correct the following errors."
             BorderColor="Red" ForeColor="Red" 
-            BorderStyle="Solid" runat="server"/>
+            BorderStyle="Solid" runat="server"
+            Display="Dynamic"/>
         <br /><br /><br />
 
         <label for="txtUserName">User Name: </label> &nbsp;&nbsp;
