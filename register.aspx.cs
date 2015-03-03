@@ -21,7 +21,7 @@ public partial class Register : System.Web.UI.Page
     {
         if (Page.IsValid)
         {
-            Response.Redirect("~/ThankYou.aspx");
+            Response.Redirect("~/Home.aspx");
         }
 
     }
