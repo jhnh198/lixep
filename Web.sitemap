@@ -4,8 +4,9 @@
       <siteMapNode url="~/Contact.aspx" title="Contact"  description="Contact" />
       <siteMapNode url="~/Forums.aspx" title="Forums"  description="Forums" />
       <siteMapNode url="~/Games.aspx" title="Games" description="Games"/>
+      <siteMapNode url="~/Login.aspx" title="Login" description="Login"/>
       <siteMapNode url="~/Register.aspx" title="Register" description="register"/>
       <siteMapNode url="~/RelatedSites.aspx" title="Related Sites" description="Related Sites"/>
-      <siteMapNode url="Scoreboard.aspx" title="Scoreboard" description="Scoreboard"/>
+      <siteMapNode url="~/Scoreboard.aspx" title="Scoreboard" description="Scoreboard"/>
     </siteMapNode>
 </siteMap>
