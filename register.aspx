@@ -10,7 +10,7 @@
  
         <br /><br /><br />
 
-        <label for="txtUserName">User Name: </label> &nbsp;&nbsp;
+        <asp:Label ID="lblUserName" runat="server">User Name: </asp:Label> &nbsp;&nbsp;
 
         <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox> &nbsp;&nbsp;
 
@@ -20,7 +20,7 @@
         </asp:RequiredFieldValidator>
         <br /><br />
 
-        <label for="lstGender">Gender: </label><br />
+        <asp:Label ID="lblGender" runat="server">Gender: </asp:Label><br />
 
         <asp:ListBox ID="lstGender" runat="server">
             <asp:ListItem Selected="True" Value="None">Choose Gender</asp:ListItem>
@@ -33,7 +33,7 @@
        </asp:RequiredFieldValidator>
         <br /><br />
 
-        <label for="txtPassword">Password: </label>&nbsp;&nbsp;
+        <asp:Label ID="lblPassword" runat="server">Password: </asp:Label>&nbsp;&nbsp;
 
         <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox> &nbsp;&nbsp;
 
@@ -43,7 +43,7 @@
 
         <br /><br />
 
-        <label for="txtReenterPassword">Password: </label>&nbsp;&nbsp;
+        <asp:Label ID="lblReenterPassword" runat="server">Password: </asp:Label>&nbsp;&nbsp;
 
         <asp:TextBox ID="txtReenterPassword" runat="server" TextMode="Password"></asp:TextBox> &nbsp;&nbsp;
 
@@ -57,7 +57,7 @@
 
         <br /><br />
 
-        <label for="txtAge">Age: </label>&nbsp;&nbsp;
+        <asp:Label ID="lblAge" runat="server">Age: </asp:Label>&nbsp;&nbsp;
 
         <asp:TextBox ID="txtAge" runat="server"></asp:TextBox> &nbsp;&nbsp;
 
@@ -71,7 +71,7 @@
         </asp:RequiredFieldValidator>
         <br /><br />
 
-        <label for="email">Email: </label>&nbsp;&nbsp;
+        <asp:Label ID="lblEmail" runat="server">Email: </asp:Label>&nbsp;&nbsp;
 
         <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox> &nbsp;&nbsp;
 
@@ -91,7 +91,7 @@
 
         <br /><br />
 
-        <label for="txtReferralCode">Referral Code: </label>&nbsp;&nbsp;
+        <asp:Label ID="lblReferralCode" runat="server">Referral Code: </asp:Label>&nbsp;&nbsp;
         <asp:TextBox ID="txtReferralCode" runat="server"></asp:TextBox> &nbsp;&nbsp;
         <asp:CustomValidator ID="vldCustomCode" runat="server" 
             ErrorMessage="Not a valid referral code."
