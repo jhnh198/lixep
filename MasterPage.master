@@ -4,7 +4,6 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Lixep</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
     <asp:ContentPlaceHolder id="head" runat="server">
@@ -14,13 +13,24 @@
     <br /><br />
     <form id="formMain" runat="server">
         <div id="mainNav">
-            <asp:ContentPlaceHolder id="cntTabs" runat="server">
-            </asp:ContentPlaceHolder>
+    <asp:LinkButton ID="lbtnHome" runat="server" PostBackUrl="~/Home.aspx">Home</asp:LinkButton>
+    <asp:LinkButton ID="lbtnGames" runat="server" PostBackUrl="~/Games.aspx">Games</asp:LinkButton>
+    <asp:LinkButton ID="lbtnScoreboard" runat="server" PostBackUrl="~/Scoreboard.aspx">Scoreboard</asp:LinkButton>
+    <asp:LinkButton ID="lbtnForums" runat="server" PostBackUrl="~/Forums.aspx">Forums</asp:LinkButton>
+    <asp:LinkButton ID="lbtnRelatedSites" runat="server" PostBackUrl="~/RelatedSites.aspx">Related Sites</asp:LinkButton>
+    <asp:LinkButton ID="lbtnRegister" runat="server" PostBackUrl="~/Register.aspx">Register</asp:LinkButton>
+    <asp:LinkButton ID="lbtnLogin" runat="server" PostBackUrl="~/Login.aspx">Login</asp:LinkButton>
+    <asp:LinkButton ID="lbtnContact" runat="server" PostBackUrl="~/Contact.aspx">Contact</asp:LinkButton>
         </div>
 
     <br /><br />
 
         <div id="mainBodyTemplate">
+            <asp:ValidationSummary ID="vldAllFields"
+                HeaderText="Please correct the following errors."
+                BorderColor="Red" ForeColor="Red" 
+                BorderStyle="Solid" runat="server"
+                />
             <asp:ContentPlaceHolder ID="cntPageMain" runat="server">
 
             </asp:ContentPlaceHolder>

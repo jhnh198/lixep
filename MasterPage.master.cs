@@ -11,4 +11,8 @@ public partial class MasterPage : System.Web.UI.MasterPage
     {
 
     }
+    public string ValidationGroup
+    {
+        set {vldAllFields.ValidationGroup = value; }
+    }
 }
