@@ -18,12 +18,7 @@
             ErrorMessage="User Name is required."
             ForeColor="Red" Display="Dynamic">
         </asp:RequiredFieldValidator>
-        <asp:RangeValidator ID="RangeValidator1" runat="server" 
-            ErrorMessage="User name must be between 3 and 20 characters long."
-            Min="3"
-            Max="20"
-            Display="Dynamic"
-            ControlToValidate="txtUserName"></asp:RangeValidator>  
+
         <br /><br />
 
         <asp:Label ID="lblGender" runat="server">Gender: </asp:Label><br />
