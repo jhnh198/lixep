@@ -6,5 +6,40 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cntPageMain" runat="server">
 
-</asp:Content>
+    <p>Lixep Forums</p><br />
+    <asp:HyperLink ID="lnkGeneral" runat="server">General Discussion</asp:HyperLink>
+    <asp:Label ID="lblGeneral" runat="server" Text=""></asp:Label><br />
+    <asp:Table ID="tblGeneral" runat="server">
+        <asp:TableRow>
+            <asp:TableHeaderCell>Topic</asp:TableHeaderCell>
+            <asp:TableHeaderCell>User</asp:TableHeaderCell>
+            <asp:TableHeaderCell>Replies</asp:TableHeaderCell>
+            <asp:TableHeaderCell>Last Reply</asp:TableHeaderCell>
+        </asp:TableRow>
+    </asp:Table>
+    <br /><br />
+    
+    <asp:HyperLink ID="lnkGames" runat="server">Games</asp:HyperLink>
+    <asp:Label ID="lblGames" runat="server" Text=""></asp:Label>
+    <asp:Table ID="tblGames" runat="server">
+        <asp:TableRow>
+            <asp:TableHeaderCell>Topic</asp:TableHeaderCell>
+            <asp:TableHeaderCell>User</asp:TableHeaderCell>
+            <asp:TableHeaderCell>Replies</asp:TableHeaderCell>
+            <asp:TableHeaderCell>Last Reply</asp:TableHeaderCell>
+        </asp:TableRow>
+    </asp:Table>
+    <br /><br />
 
+    <asp:HyperLink ID="lnkSupport" runat="server">Support</asp:HyperLink>
+    <asp:Label ID="lblSupport" runat="server" Text=""></asp:Label>
+    <asp:Table ID="tblSupport" runat="server">
+        <asp:TableRow>
+            <asp:TableHeaderCell>Topic</asp:TableHeaderCell>
+            <asp:TableHeaderCell>User</asp:TableHeaderCell>
+            <asp:TableHeaderCell>Replies</asp:TableHeaderCell>
+            <asp:TableHeaderCell>Last Reply</asp:TableHeaderCell>           
+        </asp:TableRow>
+    </asp:Table>
+    <br /><br />
+</asp:Content>
