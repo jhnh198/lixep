@@ -1,8 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Home.aspx.cs" Inherits="Home" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <title>Home</title>
-    <asp:SiteMapPath runat="server"></asp:SiteMapPath>
+    Home
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cntPageMain" runat="server">
     <h1>Welcome to Lixep!</h1>

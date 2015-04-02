@@ -1,8 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="RelatedSites.aspx.cs" Inherits="RelatedSites" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <title>Related Sites</title>
-    <asp:SiteMapPath runat="server"></asp:SiteMapPath>
+    Related Sites
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cntPageMain" runat="server">
     <span>

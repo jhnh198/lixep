@@ -1,8 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Contact.aspx.cs" Inherits="Contact" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <title>Contact Information</title>
-    <asp:SiteMapPath runat="Server"></asp:SiteMapPath>
+    Contact Us
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cntPageMain" Runat="Server">
