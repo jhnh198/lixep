@@ -11,4 +11,8 @@ public partial class Games : System.Web.UI.Page
     {
 
     }
+
+    public  float averageScore(float reviewScore, int numOfReviews){
+        return reviewScore / numOfReviews;
+    }
 }
