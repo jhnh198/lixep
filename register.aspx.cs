@@ -8,7 +8,6 @@ using System.Web.UI.WebControls;
 
 public partial class Register : System.Web.UI.Page
 {
-    List<string> referralCodes = new List<string>();
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -16,6 +15,7 @@ public partial class Register : System.Web.UI.Page
     }
     protected void CreateUserWizard1_CreatedUser(object sender, EventArgs e)
     {
+
         if (!Roles.RoleExists("user"))
         {
             Roles.CreateRole("user");
