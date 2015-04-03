@@ -1,2 +1,39 @@
-﻿body {
+﻿/*
+*Simple design
+*Lighter colors in back used to contrast with darker, deeper color up front
+*Green
+*/
+
+
+html{
+    background-color: gray;
+    padding: 0px;
+    height: 100%;
 }
+
+
+body{
+    background-color: white;
+    margin-left: 100px;
+    margin-right: 100px;
+    min-width: 700px;
+    display: block;
+    height: 100%;
+    min-height: 100%;
+    border: solid;
+    border-color: black;
+    border-width: 2px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#footer {
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
+
+}
+
+
