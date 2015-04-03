@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Forums.aspx.cs" Inherits="Forums" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Forums.aspx.cs" Inherits="Forums" Theme="Style" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
    Forums

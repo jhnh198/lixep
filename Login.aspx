@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" Theme="Style" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     Login
@@ -7,8 +7,8 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="cntPageMain" Runat="Server">
     <asp:Login ID="userLogin" 
         runat="server"
-        ContinueDestinationPageUrl="~/Secured_User_Pages/myAccount.aspx"
-        text="Log In You Filthy Casual">
+        DestinationPageUrl="~/Secured_User_Pages/myAccount.aspx"
+        TitleText="Log In You Filthy Casual">
     </asp:Login>
 </asp:Content>
 

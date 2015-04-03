@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="RelatedSites.aspx.cs" Inherits="RelatedSites" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="RelatedSites.aspx.cs" Inherits="RelatedSites" Theme="Style" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     Related Sites

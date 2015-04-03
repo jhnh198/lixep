@@ -19,26 +19,89 @@
 
     <asp:SiteMapPath ID="smPath" 
         Runat="server"
-        PathDirection="RootToCurrent">
+        PathDirection="RootToCurrent"
+        RenderCurrentNodeAsLink="false"
+        PathSeparator=" | "
+        Font-Size=".9em">
     </asp:SiteMapPath>
+    
+    <br />
+    <asp:Panel runat="server" 
+        ID="bannerPanel" 
+        HorizontalAlign="Center">
+        <asp:Image runat="server"
+            ImageUrl="Images/JohnnyBravo.jpeg" 
+            style="width:150px;height:150px"/>
+            <!--Currently just a placeholder-->
+    </asp:Panel>
 
-    <img id="mainImage" src="Images/JohnnyBravo.jpeg" alt="Main Banner Image" style="width:150px;height:150px"/>
-    <!--Currently just a placeholder-->
 
-    <br /><br />
+
+    <br />
+    <br />
 
     <form id="formMain" runat="server">
         <div id="mainNav">
-            <asp:LinkButton ID="lbtnHome" runat="server" PostBackUrl="~/Home.aspx" CausesValidation="false">Home</asp:LinkButton>
-            <asp:LinkButton ID="lbtnGames" runat="server" PostBackUrl="~/Games.aspx" CausesValidation="false">Games</asp:LinkButton>
-            <asp:LinkButton ID="lbtnScoreboard" runat="server" PostBackUrl="~/Scoreboard.aspx" CausesValidation="false">Scoreboard</asp:LinkButton>
-            <asp:LinkButton ID="lbtnForums" runat="server" PostBackUrl="~/Forums.aspx" CausesValidation="false">Forums</asp:LinkButton>
-            <asp:LinkButton ID="lbtnRelatedSites" runat="server" PostBackUrl="~/RelatedSites.aspx" CausesValidation="false">Related Sites</asp:LinkButton>
-            <asp:LinkButton ID="lbtnContact" runat="server" PostBackUrl="~/Contact.aspx" CausesValidation="false">Contact</asp:LinkButton>
-            <asp:LinkButton ID="lbtnMyAccount" runat="server" PostBackUrl="~/Secured_User_Pages/myAccount.aspx" CausesValidation="false">My Account</asp:LinkButton>
-            <asp:LinkButton ID="lbtnRegister" runat="server" PostBackUrl="~/Register.aspx" CausesValidation="false">Register</asp:LinkButton>
-            <asp:LinkButton ID="lbtnLogin" runat="server" PostBackUrl="~/Login.aspx" CausesValidation="false">Login</asp:LinkButton>
-            <asp:LinkButton ID="lbtnLogout" runat="server" CausesValidation="false" OnClick="lbtnLogout_Click">Logout</asp:LinkButton>
+            <asp:Button ID="btnHome" 
+                runat="server" 
+                PostBackUrl="~/Home.aspx" 
+                CausesValidation="false"
+                EnableTheming="true"
+                Text="Home" />
+
+            <asp:Button ID="btnGames" 
+                runat="server" 
+                PostBackUrl="~/Games.aspx" 
+                CausesValidation="false"
+                Text="Games" />
+
+            <asp:Button ID="btnScoreboard" 
+                runat="server" 
+                PostBackUrl="~/Scoreboard.aspx" 
+                CausesValidation="false"
+                Text="Scoreboard" />
+
+            <asp:Button ID="btnForums" 
+                runat="server" 
+                PostBackUrl="~/Forums.aspx" 
+                CausesValidation="false"
+                Text="Forums" />
+
+            <asp:Button ID="btnRelatedSites" 
+                runat="server" 
+                PostBackUrl="~/RelatedSites.aspx" 
+                CausesValidation="false"
+                Text="Related Sites" />
+
+            <asp:Button ID="btnContact" 
+                runat="server" 
+                PostBackUrl="~/Contact.aspx" 
+                CausesValidation="false"
+                Text="Contact" />
+
+            <asp:Button ID="btnMyAccount" 
+                runat="server" 
+                PostBackUrl="~/Secured_User_Pages/myAccount.aspx" 
+                CausesValidation="false"
+                Text="My Account" />
+
+            <asp:Button ID="btnRegister" 
+                runat="server" 
+                PostBackUrl="~/Register.aspx" 
+                CausesValidation="false"
+                Text="Register" />
+
+            <asp:Button ID="btnLogin" 
+                runat="server" 
+                PostBackUrl="~/Login.aspx" 
+                CausesValidation="false"
+                Text="Login" />
+
+            <asp:Button ID="btnLogout" 
+                runat="server" 
+                CausesValidation="false" 
+                OnClick="lbtnLogout_Click"
+                Text="Logout" />
 
         </div>
 

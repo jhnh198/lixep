@@ -1,0 +1,12 @@
+﻿<asp:Button 
+    runat="server" 
+    ForeColor="White" 
+    BackColor="Gray"
+    Font-Bold="true"
+    Font-Size="1em"
+    Height="25px"
+    Width="125px" 
+    BorderColor="Black"
+    BorderStyle="Solid"
+    BorderWidth="1px"
+    Margin="0"/>
