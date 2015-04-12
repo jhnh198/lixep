@@ -5,16 +5,17 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cntPageMain" runat="Server">
     <div>
-        <p>My Name: </p>
+        <p>My name: </p>
             <asp:Label ID="lblUserName" runat="server" Text=""></asp:Label>
-        <p>Change Password: </p>
-        <p>Old Password: </p>
-            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <p>Change password: </p>
+        <p>Old password: </p>
+            <asp:TextBox ID="txtOldPw" runat="server"></asp:TextBox>
         <p>Enter new password: </p>
-            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtNewPw" runat="server"></asp:TextBox>
         <p>Confirm new password: </p>
-            <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-        <asp:Button ID="Button1" runat="server" Text="Button" />
+            <asp:TextBox ID="txtNewPwConfirm" runat="server"></asp:TextBox>
+        <br />
+        <asp:Button ID="btnChangePw" runat="server" Text=" Confirm " />
     </div>
 
 </asp:Content>
