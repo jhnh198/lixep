@@ -7,15 +7,7 @@
     <div>
         <p>My name: </p>
             <asp:Label ID="lblUserName" runat="server" Text=""></asp:Label>
-        <p>Change password: </p>
-        <p>Old password: </p>
-            <asp:TextBox ID="txtOldPw" runat="server"></asp:TextBox>
-        <p>Enter new password: </p>
-            <asp:TextBox ID="txtNewPw" runat="server"></asp:TextBox>
-        <p>Confirm new password: </p>
-            <asp:TextBox ID="txtNewPwConfirm" runat="server"></asp:TextBox>
-        <br />
-        <asp:Button ID="btnChangePw" runat="server" Text=" Confirm " />
+        <asp:ChangePassword ID="ChangePassword1" runat="server"></asp:ChangePassword>
     </div>
 
 </asp:Content>
