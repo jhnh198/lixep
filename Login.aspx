@@ -8,7 +8,7 @@
     <asp:Login ID="userLogin" 
         runat="server"
         DestinationPageUrl="~/Secured_User_Pages/myAccount.aspx"
-        TitleText="Log In You Filthy Casual">
+        TitleText="Log In You Filthy Casual"
         PasswordRecoveryUrl="~/PasswordRecovery.aspx"
         PasswordRecoveryText="Forgot your password?">
     </asp:Login>
