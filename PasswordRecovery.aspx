@@ -13,7 +13,7 @@
         SuccessText="Your password has been sent to the email address on file."
         UserNameFailureText="User name not on file."
         UserNameTitleText="Password Recovery">
-        <MailDefinition From="LixepAdmne@gmail.com"
+        <MailDefinition From="lexipadmn@gmail.com"
             Subject="Password Reset"
             BodyFileName="~/PasswordRecoveryTemplate.txt" >
 
