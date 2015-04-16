@@ -8,6 +8,8 @@
     <asp:Login ID="userLogin" 
         runat="server"
         DestinationPageUrl="~/Secured_User_Pages/myAccount.aspx"
+        CreateUserText="Register Now!"
+        CreateUserUrl="~/register.aspx"
         TitleText="Log In You Filthy Casual"
         PasswordRecoveryUrl="~/PasswordRecovery.aspx"
         PasswordRecoveryText="Forgot your password?">
