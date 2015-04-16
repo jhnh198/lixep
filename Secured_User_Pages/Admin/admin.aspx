@@ -37,7 +37,6 @@
             </asp:ListBox> <br /><br />
 
             <asp:Button ID="btnEdit" Visible="false" OnClick="btnEdit_Click" runat="server" Text="Submit Changes" />
-            <asp:Button ID="btnCancel" Visible="false" OnClick="btnCancel_Click" runat="server" Text="Cancel Changes" /><br /><br />
             
             <asp:Label ID="lblError" Visible="false" ForeColor="Red" runat="server" Text="Label"></asp:Label>
 
