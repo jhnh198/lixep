@@ -8,6 +8,22 @@
         <p>My name: </p>
             <asp:Label ID="lblUserName" runat="server" Text=""></asp:Label>
         <asp:ChangePassword ID="ChangePassword1" runat="server"></asp:ChangePassword>
+        <br /><br />
+        <asp:LoginView ID="lgView" runat="server">
+            <AnonymousTemplate>
+                
+            </AnonymousTemplate>
+            <RoleGroups>
+                <asp:RoleGroup Roles="admin">
+                    <ContentTemplate>
+                        <p>Hello admin. Would you like to
+                        <asp:HyperLink ID="lnkAdmin" NavigateUrl="~/Secured_User_Pages/Admin/admin.aspx" runat="server">edit</asp:HyperLink>
+                            the users account information?</p>
+                    </ContentTemplate>
+                </asp:RoleGroup>
+            </RoleGroups>
+        </asp:LoginView>
+
     </div>
 
 </asp:Content>
