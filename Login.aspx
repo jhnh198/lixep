@@ -7,10 +7,13 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="cntPageMain" Runat="Server">
     <asp:Login ID="userLogin" 
         runat="server"
-        DestinationPageUrl="~/Secured_User_Pages/myAccount.aspx"
+        DestinationPageUrl="~/Home.aspx"
         CreateUserText="Register Now!"
         CreateUserUrl="~/register.aspx"
+        InstructionText="Enter your username and password."
+        FailureText="Too bad!"
         TitleText="Log In You Filthy Casual"
+        LogInButtonText="Log In"
         PasswordRecoveryUrl="~/PasswordRecovery.aspx"
         PasswordRecoveryText="Forgot your password?">
     </asp:Login>
