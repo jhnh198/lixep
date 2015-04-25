@@ -18,25 +18,28 @@ public partial class Contact : System.Web.UI.Page
     {
         try
         {
-            MailMessage mail = messageCreation();
+            MailMessage mail = new MailMessage();
+            mail.From = new System.Net.Mail.MailAddress("lexipadmn@gmail.com");
+
             SmtpClient client = new SmtpClient();
+            client.Port = 465;
+            client.EnableSsl = true;
+            client.DeliveryMethod = SmtpDeliveryMethod.Network;
+            client.UseDefaultCredentials = false;
+            client.Credentials = new NetworkCredential("lexipadmn@gmail.com", "pixel7879");
+            client.Host = "smtp.gmail.com";
+
+            mail.To.Add(new MailAddress("lexipadmn@gmail.com"));
+            mail.Subject = "Contact Us";
+            mail.Body = tbComments.Text;
+
             client.Send(mail);
             Response.Write("Mail Sent!");
         }
-        catch(Exception exception)
+        catch (Exception exception)
         {
             lblMessage.Visible = true;
             lblMessage.Text = exception.ToString();
         }
-    }
-
-    protected MailMessage messageCreation()
-    {
-        MailMessage mail = new MailMessage();
-        mail.To.Add("lexipadmn@gmail.com");
-        mail.From = new MailAddress("lexipadmn@gmail.com", tbName.Text);
-        mail.Subject = "Contact Us";
-        mail.Body = tbComments.Text;
-        return mail;
     }
 }
