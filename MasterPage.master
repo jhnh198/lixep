@@ -61,12 +61,6 @@
                 CausesValidation="false"
                 Text="Scoreboard" />
 
-            <asp:Button ID="btnForums" 
-                runat="server" 
-                PostBackUrl="~/Forums.aspx" 
-                CausesValidation="false"
-                Text="Forums" />
-
             <asp:Button ID="btnRelatedSites" 
                 runat="server" 
                 PostBackUrl="~/RelatedSites.aspx" 

@@ -24,7 +24,6 @@
     {
         // Code that runs when a new session is started
         Session["SessionStart"] = DateTime.Now;
-        Session["SessionPageClicks"] = 0;
     }
 
     void Session_End(object sender, EventArgs e) 

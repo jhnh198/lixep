@@ -27,7 +27,7 @@ public partial class Contact : System.Web.UI.Page
 
             MailMessage mail = new MailMessage();
             mail.From = new MailAddress("lexipadmn@gmail.com");
-            mail.To.Add(new MailAddress("lexipadmn@gmail.com"));
+            mail.To.Add(new MailAddress("kyle.tamayo@gmail.com"));
             mail.Subject = "Contact Us";
             mail.IsBodyHtml = true;
             mail.Body = tbComments.Text;
