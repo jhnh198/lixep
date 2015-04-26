@@ -59,7 +59,6 @@ public partial class Secured_User_Pages_Admin_admin : System.Web.UI.Page
 
         lstRoles.Visible = true;
         lblRole.Visible = true;
-        btnCancel.Visible = true;
         btnEdit.Visible = true;
         lblUserInfo.Visible = true;
     }
@@ -70,10 +69,7 @@ public partial class Secured_User_Pages_Admin_admin : System.Web.UI.Page
         lblError.Text = "User Privilege Updated.";
         lblError.Visible = true;
     }
-    protected void btnCancel_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("admin.aspx");
-    }
+
     protected void lstRoles_SelectedIndexChanged(object sender, EventArgs e)
     {
         String newRole = lstRoles.SelectedValue;

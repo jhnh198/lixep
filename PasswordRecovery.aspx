@@ -1,18 +1,14 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="PasswordRecovery.aspx.cs" Inherits="PasswordRecovery" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="PasswordRecovery.aspx.cs" Inherits="PasswordRecovery" Theme="Style" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    <asp:PasswordRecovery ID="passwordRecovery" runat="server"
-        SuccessText="Your password has been sent to the email address on file."
-        UserNameFailureText="User name not on file."
-        UserNameTitleText="Password Recovery">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    Password Recovery
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cntPageMain" Runat="Server">
+        <asp:PasswordRecovery ID="passwordRecovery" 
+            runat="server"
+            SuccessText="Your password has been sent to the email address on file."
+            UserNameFailureText="User name not on file."
+            UserNameTitleText="Password Recovery">
         <MailDefinition From="lexipadmn@gmail.com"
             Subject="Password Reset"
             BodyFileName="~/PasswordRecoveryTemplate.txt" >
@@ -24,7 +20,5 @@
         <LabelStyle HorizontalAlign="Left" Width="5em"/>
         <SubmitButtonStyle Width="5em" />
     </asp:PasswordRecovery>
-    </div>
-    </form>
-</body>
-</html>
+</asp:Content>
+

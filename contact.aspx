@@ -10,9 +10,31 @@
     </span>
     <br />
 
-    <asp:TextBox ID="comments" TextMode="MultiLine" runat="server"></asp:TextBox>
+    <asp:TextBox ID="tbName" 
+        runat="server">
+    </asp:TextBox>
+
+    <br />
+    <br />
+
+    <asp:TextBox ID="tbComments" 
+        TextMode="MultiLine"
+        runat="server">
+    </asp:TextBox>
 
     <br /><br />
-    <asp:Button ID="collect" runat="server" Text="Send"/>
+
+    <asp:Label ID="lblMessage"
+        runat="server" 
+        Text=""
+        Visible="false">
+    </asp:Label>
+    
+    <br /><br />
+
+    <asp:Button ID="btnCollect" 
+        runat="server" 
+        Text="Send"
+        OnClick="btnCollect_Click"/>
 </asp:Content>
 
