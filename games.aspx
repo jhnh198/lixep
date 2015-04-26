@@ -5,6 +5,12 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cntPageMain" runat="server">
+
+    <asp:Label ID="lblPageCount"
+        runat="server"
+        Text=""/>
+    <br />
+
     <p>Games to download and review</p>
     <asp:GridView ID="gvGames" runat="server" 
         DataSourceID="sourceGames" 

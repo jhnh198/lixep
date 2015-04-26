@@ -9,7 +9,11 @@ public partial class Games : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        Application.Lock();
+        int pageHit = Convert.ToInt32(Application["PageHitsGames"]) + 1;
+        lblPageCount.Text = "You have visited this page " + pageHit.ToString() + " times.";
+        Application["PageHitsGames"] = pageHit;
+        Application.UnLock();
     }
 
     public  float averageScore(float reviewScore, int numOfReviews){

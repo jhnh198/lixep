@@ -5,6 +5,12 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cntPageMain" Runat="Server">
+    <asp:Label ID="lblPageCount"
+        runat="server"
+        Text="">
+    </asp:Label>
+    <br />
+    <br />
     <span>
         Please leave any comments and concerns right here:
     </span>

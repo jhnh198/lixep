@@ -5,7 +5,9 @@
     void Application_Start(object sender, EventArgs e) 
     {
         // Code that runs on application startup
-        Application["PageHits"] = 0;
+        Application["PageHitsRelatedSites"] = 0;
+        Application["PageHitsGames"] = 0;
+        Application["PageHitsScoreboard"] = 0;
     }
     
     void Application_End(object sender, EventArgs e) 

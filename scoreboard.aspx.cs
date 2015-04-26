@@ -9,7 +9,11 @@ public partial class Scoreboard : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        Application.Lock();
+        int pageHit = Convert.ToInt32(Application["PageHitsScoreboard"]) + 1;
+        lblPageCount.Text = "You have visited this page " + pageHit.ToString() + " times.";
+        Application["PageHitsScoreboard"] = pageHit;
+        Application.UnLock();
     }
     protected void Button1_Click1(object sender, EventArgs e)
     {

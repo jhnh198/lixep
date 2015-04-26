@@ -11,7 +11,11 @@ public partial class Contact : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        Application.Lock();
+        int pageHit = Convert.ToInt32(Application["PageHitsContact"]) + 1;
+        lblPageCount.Text = "You have tried yelling at us " + pageHit.ToString() + " times.";
+        Application["PageHitsContact"] = pageHit;
+        Application.UnLock();
     }
 
     protected void btnCollect_Click(object sender, EventArgs e)
