@@ -15,4 +15,12 @@ public partial class Games : System.Web.UI.Page
     public  float averageScore(float reviewScore, int numOfReviews){
         return reviewScore / numOfReviews;
     }
+    protected void btnSubmit_Click(object sender, EventArgs e)
+    {
+
+    }
+    protected void btnDownloadGame_Click(object sender, EventArgs e)
+    {
+
+    }
 }
