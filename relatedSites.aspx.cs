@@ -9,6 +9,13 @@ public partial class RelatedSites : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (!IsPostBack)
+        {
+            Application.Lock();
+            int pageHit = Convert.ToInt32(Application["PageHits"]) + 1;
+            lblPageCount.Text = "You have visited this page " + pageHit.ToString() + " times.";
+            Application["PageHits"] = pageHit;
+            Application.UnLock();
+        }
     }
 }

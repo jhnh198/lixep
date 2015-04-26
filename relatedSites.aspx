@@ -4,6 +4,11 @@
     Related Sites
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cntPageMain" runat="server">
+    <asp:Label ID="lblPageCount"
+        runat="server"
+        Text=""/>
+    <br /><br />
+
     <span>
         <asp:ImageButton ID="ibtnTwitch" ImageUrl="~/Images/twitchLogo.png" runat="server" PostBackUrl="http://twitch.tv/" Width="200px" Height="200px"/>
         <p>Twitch is a great site for watching some of the most popular games out today along with a few hidden classics. Check it out, watch the streamer, and chat with others all on one site!</p>

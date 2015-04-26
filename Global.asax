@@ -5,7 +5,7 @@
     void Application_Start(object sender, EventArgs e) 
     {
         // Code that runs on application startup
-
+        Application["PageHits"] = 0;
     }
     
     void Application_End(object sender, EventArgs e) 
@@ -23,7 +23,8 @@
     void Session_Start(object sender, EventArgs e) 
     {
         // Code that runs when a new session is started
-
+        Session["SessionStart"] = DateTime.Now;
+        Session["SessionPageClicks"] = 0;
     }
 
     void Session_End(object sender, EventArgs e) 
