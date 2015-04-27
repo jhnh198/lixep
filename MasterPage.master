@@ -42,60 +42,84 @@
 
     <form id="formMain" runat="server">
         <div id="mainNav">
+            <asp:Panel runat="server"
+                ID="navPanel"
+                HorizontalAlign="Center">
+
             <asp:Button ID="btnHome" 
                 runat="server" 
                 PostBackUrl="~/Home.aspx" 
                 CausesValidation="false"
                 EnableTheming="true"
+                SkinID="navButton"
+                CssClass="navButtons"
                 Text="Home" />
 
             <asp:Button ID="btnGames" 
                 runat="server" 
                 PostBackUrl="~/Games.aspx" 
                 CausesValidation="false"
+                SkinID="navButton"
+                CssClass="navButtons"
                 Text="Games" />
 
             <asp:Button ID="btnScoreboard" 
                 runat="server" 
                 PostBackUrl="~/Scoreboard.aspx" 
                 CausesValidation="false"
+                SkinID="navButton"
+                CssClass="navButtons"
                 Text="Scoreboard" />
 
             <asp:Button ID="btnRelatedSites" 
                 runat="server" 
                 PostBackUrl="~/RelatedSites.aspx" 
                 CausesValidation="false"
+                SkinID="navButton"
+                CssClass="navButtons"
                 Text="Related Sites" />
 
             <asp:Button ID="btnContact" 
                 runat="server" 
                 PostBackUrl="~/Contact.aspx" 
                 CausesValidation="false"
+                SkinID="navButton"
+                CssClass="navButtons"
                 Text="Contact" />
 
             <asp:Button ID="btnMyAccount" 
                 runat="server" 
                 PostBackUrl="~/Secured_User_Pages/myAccount.aspx" 
                 CausesValidation="false"
+                SkinID="navButton"
+                CssClass="navButtons"
                 Text="My Account" />
 
             <asp:Button ID="btnRegister" 
                 runat="server" 
                 PostBackUrl="~/Register.aspx" 
                 CausesValidation="false"
+                SkinID="navButton"
+                CssClass="navButtons"
                 Text="Register" />
 
             <asp:Button ID="btnLogin" 
                 runat="server" 
                 PostBackUrl="~/Login.aspx" 
                 CausesValidation="false"
+                SkinID="navButton"
+                CssClass="navButtons"
                 Text="Login" />
 
             <asp:Button ID="btnLogout" 
                 runat="server" 
                 CausesValidation="false" 
                 OnClick="lbtnLogout_Click"
+                SkinID="navButton"
+                CssClass="navButtons"
                 Text="Logout" />
+
+                </asp:Panel>
 
         </div>
 

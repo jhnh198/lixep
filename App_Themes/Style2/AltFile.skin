@@ -1,4 +1,4 @@
-﻿<asp:Button 
+<asp:Button 
     runat="server" 
     ForeColor="White" 
     BackColor="Gray"
@@ -14,7 +14,7 @@
 <asp:Button
     runat="server"
     SkinID="navButton"
-    BackColor="Red"
+    BackColor="Blue"
     ForeColor="White"
     Font-Bold="true"
     Font-Size="1em"
