@@ -14,7 +14,7 @@
 <asp:Button
     runat="server"
     SkinID="navButton"
-    BackColor="Blue"
+    BackColor="DarkRed"
     ForeColor="White"
     Font-Bold="true"
     Font-Size="1em"
