@@ -15,23 +15,29 @@ public partial class Scoreboard : System.Web.UI.Page
         Application["PageHitsScoreboard"] = pageHit;
         Application.UnLock();
     }
-    protected void Button1_Click1(object sender, EventArgs e)
+    
+protected void Button1_Click1(object sender, EventArgs e)
     {
         string url = Image1.ImageUrl;
         Image1.ImageUrl = Image2.ImageUrl;
         Image2.ImageUrl = Image3.ImageUrl;
         Image3.ImageUrl = Image4.ImageUrl;
-        Image4.ImageUrl = url;
+        Image4.ImageUrl = Image5.ImageUrl;
+        Image5.ImageUrl = url;
 
     }
     protected void Button2_Click1(object sender, EventArgs e)
     {
-        string url = Image4.ImageUrl;
+        string url = Image5.ImageUrl;
+        Image5.ImageUrl = Image4.ImageUrl;
         Image4.ImageUrl = Image3.ImageUrl;
         Image3.ImageUrl = Image2.ImageUrl;
         Image2.ImageUrl = Image1.ImageUrl;
+
         Image1.ImageUrl = url;
     }
 
     
 }
+    
+
