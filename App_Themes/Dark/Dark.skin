@@ -1,15 +1,37 @@
 <asp:Button 
     runat="server" 
-    ForeColor="Gray" 
-    BackColor="Black"
+    ForeColor="White" 
+    BackColor="Gray"
     Font-Bold="true"
     Font-Size="1em"
-    Font-Color="White"
     Height="25px"
     Width="125px" 
-    BorderColor="Gray"
+    BorderColor="Black"
     BorderStyle="Solid"
     BorderWidth="1px"
     Margin="0"/>
 
+<asp:Button
+    runat="server"
+    SkinID="navButton"
+    BackColor="Blue"
+    ForeColor="White"
+    Font-Bold="true"
+    Font-Size="1em"
+    Height="25px"
+    Width="125px" 
+    BorderColor="Black"
+    BorderStyle="Solid"
+    BorderWidth="1px"
+    Align="center"
+    Margin="0"/>
 
+<asp:Image
+    runat="server"
+    SkinID="imgsScorboard"
+    Height="383px" 
+    Width="600px" 
+    BorderColor="Gray"
+    BorderStyle="Solid" 
+    BorderWidth="15px" 
+    ImageAlign="Top"/>
