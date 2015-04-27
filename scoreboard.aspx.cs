@@ -11,7 +11,7 @@ public partial class Scoreboard : System.Web.UI.Page
     {
         Application.Lock();
         int pageHit = Convert.ToInt32(Application["PageHitsScoreboard"]) + 1;
-        lblPageCount.Text = "You have visited this page " + pageHit.ToString() + " times.";
+        //lblPageCount.Text = "You have visited this page " + pageHit.ToString() + " times.";
         Application["PageHitsScoreboard"] = pageHit;
         Application.UnLock();
     }

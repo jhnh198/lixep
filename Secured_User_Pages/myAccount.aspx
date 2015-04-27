@@ -50,6 +50,12 @@
 
         <asp:Label ID="lblAboutSaved" runat="server" Text="About Me: "></asp:Label>
         <asp:Label ID="lblShowAbout" runat="server" Text=""></asp:Label><br /><br />
+        
+        <h1 id="themeTxt" runat="server"> Select Website Theme</h1>
+        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="true">
+            <asp:ListItem Value="Style" Selected="True">Default</asp:ListItem>
+            <asp:ListItem Value="Dark">Dark</asp:ListItem>
+        </asp:DropDownList><br /><br />
 
         <asp:Button ID="btnEdit" OnClick="btnEdit_Click" runat="server" Text="Edit Settings" />
     </div>

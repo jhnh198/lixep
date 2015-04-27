@@ -93,4 +93,13 @@ public partial class Secured_User_Pages_myAccount : System.Web.UI.Page
         txtAbout.Text = Profile.About;
         btnCancel.Visible = true;
     }
+
+    protected void Page_PreInit(object sender, EventArgs e)
+    {
+        Page.Theme = "Style";
+        if(Request.Form != null && Request.Form.Count > 0)
+        {
+            Page.Theme = Request.Form[4];
+        }
+    }
 }
