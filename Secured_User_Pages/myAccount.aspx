@@ -12,6 +12,14 @@
             Text="">
         </asp:Label>
 
+        <br />
+        <br />
+
+        <asp:Label ID="lblTimeLoggedIn"
+            runat="server"
+            Text="">
+        </asp:Label>
+
         <asp:ChangePassword ID="ChangePassword1"
                 runat="server">
         </asp:ChangePassword>

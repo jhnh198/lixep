@@ -4,6 +4,10 @@
     Scoreboard
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cntPageMain" runat="server">
+    <asp:Label ID="lblPageCount"
+        runat="server"
+        Text=""/>
+    <br />
     
     <asp:Button ID="Button2" runat="server" Text="Next" OnClick="Button2_Click1" style="margin-left: 0px" />
         

@@ -14,6 +14,11 @@ public partial class Secured_User_Pages_myAccount : System.Web.UI.Page
             lblUserName.Text = System.Web.HttpContext.Current.User.Identity.Name;
         }
         else lblUserName.Text = "user not logged in or invalid credentials.";
+        TimeSpan time = (((DateTime)Session["SessionStart"]).AddDays(7) - DateTime.Now);
+        int days = time.Days;
+        int hours = time.Hours;
+        int minutes = time.Minutes;
+        lblTimeLoggedIn.Text = "You have been logged in for " + days + " days " + hours + " hours " + minutes + " minutes.";
     }
 
 }
