@@ -25,9 +25,9 @@ public partial class Secured_User_Pages_myAccount : System.Web.UI.Page
             }
 
             HttpCookie cookie = Request.Cookies["Preferences"];
-            if (cookie == null)
+            if (cookie != null)
             {
-
+                ddlStyleSelection.SelectedValue = cookie["StyleSelection"];
             }
         }
 
@@ -39,11 +39,11 @@ public partial class Secured_User_Pages_myAccount : System.Web.UI.Page
 
         else lblUserName.Text = "user not logged in or invalid credentials.";
 
-        //TimeSpan time = (((DateTime)Session["SessionStart"]).AddDays(7) - DateTime.Now);
-        //int days = time.Days;
-        //int hours = time.Hours;
-        //int minutes = time.Minutes;
-        //lblTimeLoggedIn.Text = "You have been logged in for " + days + " days " + hours + " hours " + minutes + " minutes.";
+        TimeSpan time = (((DateTime)Session["SessionStart"]).AddDays(7) - DateTime.Now);
+        int days = time.Days;
+        int hours = time.Hours;
+        int minutes = time.Minutes;
+        lblTimeLoggedIn.Text = "You have been logged in for " + days + " days " + hours + " hours " + minutes + " minutes.";
     }
 
     private void showProfile()
@@ -55,14 +55,15 @@ public partial class Secured_User_Pages_myAccount : System.Web.UI.Page
         savedInfo.Visible = true;
     }
 
+    protected void populateDDL()
+    {
+        ddlStyleSelection.Items.Add(new ListItem("Default"));
+        ddlStyleSelection.Items.Add(new ListItem("Dark"));
+        ddlStyleSelection.SelectedIndex = 0;
+    }
+
     protected void btnSettings_Click(object sender, EventArgs e)
     {
-        HttpCookie cookie = Request.Cookies["Preferences"];
-        if (cookie == null)
-        {
-            cookie = new HttpCookie("Preferences");
-        }
-
         saveProfile();
         showProfile();
         initialInfo.Visible = false;
@@ -70,11 +71,11 @@ public partial class Secured_User_Pages_myAccount : System.Web.UI.Page
 
     private void saveProfile()
     {
-        Profile.FirstName = txtFirstName.Text;
-        Profile.LastName = txtLastName.Text;
-        Profile.Location = txtLocation.Text;
-        Profile.About = txtAbout.Text;
-        Profile.Save();
+            Profile.FirstName = txtFirstName.Text;
+            Profile.LastName = txtLastName.Text;
+            Profile.Location = txtLocation.Text;
+            Profile.About = txtAbout.Text;
+            Profile.Save();
     }
 
 
@@ -83,6 +84,7 @@ public partial class Secured_User_Pages_myAccount : System.Web.UI.Page
         showProfile();
         initialInfo.Visible = false;
     }
+
     protected void btnEdit_Click(object sender, EventArgs e)
     {
         initialInfo.Visible = true;
@@ -100,6 +102,19 @@ public partial class Secured_User_Pages_myAccount : System.Web.UI.Page
         if(Request.Form != null && Request.Form.Count > 0)
         {
             Page.Theme = Request.Form[4];
+        }
+    }
+    protected void ddlStyleSelection_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        HttpCookie cookie = Request.Cookies["Prefrences"];
+        if (cookie == null)
+        {
+            cookie["StyleSelection"] = ddlStyleSelection.SelectedValue;
+            Response.Cookies.Add(cookie);
+        }
+        else
+        {
+            ddlStyleSelection.SelectedValue = cookie["StyleSelection"];
         }
     }
 }
