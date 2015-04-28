@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.ServiceModel.Channels;
 using System.Web;
@@ -32,20 +34,42 @@ public partial class Games : System.Web.UI.Page
 
     }
 
-    //stuck here
-    void gv_games_RowCommand(Object sender, GridViewCommandEventArgs e)
+    //only a cosmetic rating. no single user rating only and no db update
+    protected void gv_games_RowCommand(Object sender, GridViewCommandEventArgs e)
     {
-        int index = Convert.ToInt32(e.CommandArgument);
-        GridViewRow selectedRow = gvGames.Rows[index];
-        TableCell contactName = selectedRow.Cells[3];
+        //SqlConnection con = new SqlConnection(gvGames.DataSourceID);
         
-        string contact = contactName.Text;
-        lblOutput.Text = contact;
+        int index = Convert.ToInt32(e.CommandArgument);
+        GridViewRow selectedRow = gvGames.Rows[index];        
+
         if (e.CommandName == "Download"){
-            
+            TableCell gameFileCell = selectedRow.Cells[6];
+            string gameFileToDL = gameFileCell.Text;
+            string DLDir = "~/gameDir/pong.txt";
+
+            FileInfo file = new FileInfo(DLDir);
+            if (file.Exists)
+            {
+                Response.ContentType = "text/plain";
+                Response.AddHeader("Content-Disposition", "attachment; filename=" + DLDir);
+                Response.TransmitFile(Server.MapPath("~/gameDir/pong.txt"));
+                Response.End();
+            }
         }
-        else if (e.CommandName == "Rate") { 
-            
+        else if (e.CommandName == "Rate") {
+            GridViewRow i = gvGames.SelectedRow;
+
+            TableCell gameAverageCell = selectedRow.Cells[3];
+            TableCell gameTotalCell = selectedRow.Cells[4];
+            TableCell gameTotalRatingsCell = selectedRow.Cells[5];
+            double userRating = double.Parse(rblRating.SelectedValue);
+            double gameNewTotal = userRating + double.Parse(gameTotalCell.Text);
+            double gameNewTotalRatings = double.Parse(gameTotalRatingsCell.Text);
+            gameNewTotalRatings++;
+            double gameNewAverage = gameNewTotal / gameNewTotalRatings;
+            gameAverageCell.Text = gameNewAverage.ToString();
+            gameTotalCell.Text = gameNewTotal.ToString();
+            gameTotalRatingsCell.Text = gameNewTotalRatings.ToString();
         }
     }
 }
