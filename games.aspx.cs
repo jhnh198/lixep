@@ -72,4 +72,12 @@ public partial class Games : System.Web.UI.Page
             gameTotalRatingsCell.Text = gameNewTotalRatings.ToString();
         }
     }
+    protected void Page_PreInit(object sender, EventArgs e)
+    {
+        HttpCookie cookie = Request.Cookies["Prefrences"];
+        if (cookie != null)
+        {
+            Page.Theme = cookie["StyleSelection"];
+        }
+    }
 }

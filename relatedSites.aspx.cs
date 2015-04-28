@@ -18,4 +18,12 @@ public partial class RelatedSites : System.Web.UI.Page
             Application.UnLock();
         }
     }
+    protected void Page_PreInit(object sender, EventArgs e)
+    {
+        HttpCookie cookie = Request.Cookies["Prefrences"];
+        if (cookie != null)
+        {
+            Page.Theme = cookie["StyleSelection"];
+        }
+    }
 }
