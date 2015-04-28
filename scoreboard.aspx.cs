@@ -11,12 +11,12 @@ public partial class Scoreboard : System.Web.UI.Page
     {
         Application.Lock();
         int pageHit = Convert.ToInt32(Application["PageHitsScoreboard"]) + 1;
-        //lblPageCount.Text = "You have visited this page " + pageHit.ToString() + " times.";
+        lblPageCount.Text = "You have visited this page " + pageHit.ToString() + " times.";
         Application["PageHitsScoreboard"] = pageHit;
         Application.UnLock();
     }
     
-protected void Button1_Click1(object sender, EventArgs e)
+    protected void Button1_Click1(object sender, EventArgs e)
     {
         string url = Image1.ImageUrl;
         Image1.ImageUrl = Image2.ImageUrl;
@@ -33,7 +33,6 @@ protected void Button1_Click1(object sender, EventArgs e)
         Image4.ImageUrl = Image3.ImageUrl;
         Image3.ImageUrl = Image2.ImageUrl;
         Image2.ImageUrl = Image1.ImageUrl;
-
         Image1.ImageUrl = url;
     }
     protected void Page_PreInit(object sender, EventArgs e)
