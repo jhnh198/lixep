@@ -125,6 +125,7 @@ public partial class Secured_User_Pages_myAccount : System.Web.UI.Page
         else
         {
             cookie["StyleSelection"] = ddlStyleSelection.SelectedValue;
+            Response.Cookies.Add(cookie);
         }
     }
 }
