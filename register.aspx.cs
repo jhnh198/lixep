@@ -22,4 +22,12 @@ public partial class Register : System.Web.UI.Page
         }
         Roles.AddUserToRole(wizRegisterUser.UserName, "user");
     }
+    protected void Page_PreInit(object sender, EventArgs e)
+    {
+        HttpCookie cookie = Request.Cookies["Prefrences"];
+        if (cookie != null)
+        {
+            Page.Theme = cookie["StyleSelection"];
+        }
+    }
 }

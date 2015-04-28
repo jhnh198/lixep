@@ -11,4 +11,13 @@ public partial class Home : System.Web.UI.Page
     {
 
     }
+
+    protected void Page_PreInit(object sender, EventArgs e)
+    {
+        HttpCookie cookie = Request.Cookies["Prefrences"];
+        if (cookie != null)
+        {
+            Page.Theme = cookie["StyleSelection"];
+        }
+    }
 }

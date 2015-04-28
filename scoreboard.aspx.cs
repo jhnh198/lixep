@@ -36,7 +36,14 @@ protected void Button1_Click1(object sender, EventArgs e)
 
         Image1.ImageUrl = url;
     }
-
+    protected void Page_PreInit(object sender, EventArgs e)
+    {
+        HttpCookie cookie = Request.Cookies["Prefrences"];
+        if (cookie != null)
+        {
+            Page.Theme = cookie["StyleSelection"];
+        }
+    }
     
 }
     

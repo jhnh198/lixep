@@ -39,12 +39,21 @@ public partial class Contact : System.Web.UI.Page
         try
         {
             client.Send(mail);
-            Response.Write("Mail Sent!");
+            lblMessage.Visible = true;
+            lblMessage.Text = "Message sent!";
         }
         catch (Exception exception)
         {
             lblMessage.Visible = true;
             lblMessage.Text = exception.ToString();
+        }
+    }
+    protected void Page_PreInit(object sender, EventArgs e)
+    {
+        HttpCookie cookie = Request.Cookies["Prefrences"];
+        if (cookie != null)
+        {
+            Page.Theme = cookie["StyleSelection"];
         }
     }
 }

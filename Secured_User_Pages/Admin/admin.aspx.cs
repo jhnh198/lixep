@@ -85,4 +85,12 @@ public partial class Secured_User_Pages_Admin_admin : System.Web.UI.Page
             Roles.RemoveUserFromRole(userName, lstRoles.Items[0].Value);
         }
     }
+    protected void Page_PreInit(object sender, EventArgs e)
+    {
+        HttpCookie cookie = Request.Cookies["Prefrences"];
+        if (cookie != null)
+        {
+            Page.Theme = cookie["StyleSelection"];
+        }
+    }
 }

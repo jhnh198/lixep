@@ -13,6 +13,8 @@ public partial class Secured_User_Pages_myAccount : System.Web.UI.Page
     {
         if(!IsPostBack)
         {
+            populateDDL();
+            ddlStyleSelection.Visible = true;
             ProfileCommon profile = Profile.GetProfile(User.Identity.Name);
             if(profile.LastUpdatedDate == DateTime.MinValue)
             {
@@ -28,6 +30,10 @@ public partial class Secured_User_Pages_myAccount : System.Web.UI.Page
             if (cookie != null)
             {
                 ddlStyleSelection.SelectedValue = cookie["StyleSelection"];
+            }
+            else
+            {
+                ddlStyleSelection.SelectedIndex = 0;
             }
         }
 
@@ -57,7 +63,7 @@ public partial class Secured_User_Pages_myAccount : System.Web.UI.Page
 
     protected void populateDDL()
     {
-        ddlStyleSelection.Items.Add(new ListItem("Default"));
+        ddlStyleSelection.Items.Add(new ListItem("Style"));
         ddlStyleSelection.Items.Add(new ListItem("Dark"));
         ddlStyleSelection.SelectedIndex = 0;
     }
@@ -71,16 +77,18 @@ public partial class Secured_User_Pages_myAccount : System.Web.UI.Page
 
     private void saveProfile()
     {
-            Profile.FirstName = txtFirstName.Text;
-            Profile.LastName = txtLastName.Text;
-            Profile.Location = txtLocation.Text;
-            Profile.About = txtAbout.Text;
-            Profile.Save();
+        Profile.FirstName = txtFirstName.Text;
+        Profile.LastName = txtLastName.Text;
+        Profile.Location = txtLocation.Text;
+        Profile.About = txtAbout.Text;
+        Profile.Save();
     }
 
 
     protected void btnCancel_Click(object sender, EventArgs e)
     {
+        HttpCookie cookie = Request.Cookies["Prefrences"];
+        ddlStyleSelection.SelectedValue = cookie["StyleSelection"];
         showProfile();
         initialInfo.Visible = false;
     }
@@ -109,12 +117,14 @@ public partial class Secured_User_Pages_myAccount : System.Web.UI.Page
         HttpCookie cookie = Request.Cookies["Prefrences"];
         if (cookie == null)
         {
+            cookie = new HttpCookie("Prefrences");
             cookie["StyleSelection"] = ddlStyleSelection.SelectedValue;
+            cookie.Expires = DateTime.Now.AddDays(10);
             Response.Cookies.Add(cookie);
         }
         else
         {
-            ddlStyleSelection.SelectedValue = cookie["StyleSelection"];
+            cookie["StyleSelection"] = ddlStyleSelection.SelectedValue;
         }
     }
 }
