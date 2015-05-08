@@ -34,6 +34,9 @@
             style="width:150px;height:150px"/>
             <!--Currently just a placeholder-->
     </asp:Panel>
+
+
+
     <br />
     <br />
 
@@ -51,6 +54,30 @@
                 SkinID="navButton"
                 CssClass="navButtons"
                 Text="Home" />
+
+            <asp:Button ID="btnGames" 
+                runat="server" 
+                PostBackUrl="~/Games.aspx" 
+                CausesValidation="false"
+                SkinID="navButton"
+                CssClass="navButtons"
+                Text="Games" />
+
+            <asp:Button ID="btnScoreboard" 
+                runat="server" 
+                PostBackUrl="~/Scoreboard.aspx" 
+                CausesValidation="false"
+                SkinID="navButton"
+                CssClass="navButtons"
+                Text="Scoreboard" />
+
+            <asp:Button ID="btnRelatedSites" 
+                runat="server" 
+                PostBackUrl="~/RelatedSites.aspx" 
+                CausesValidation="false"
+                SkinID="navButton"
+                CssClass="navButtons"
+                Text="Related Sites" />
 
             <asp:Button ID="btnContact" 
                 runat="server" 
@@ -93,6 +120,7 @@
                 Text="Logout" />
 
                 </asp:Panel>
+
         </div>
 
     <br /><br />
